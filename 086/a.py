@@ -1,6 +1,10 @@
 # A - Product
 # https://atcoder.jp/contests/abc086/tasks/abc086_a
 
-a,b = map(int,input().split())
+a,b = list(map(int,input().split()))
 
-print("Even" if (a * b) % 2 == 0 else "Odd")
+if (a*b)%2 == 1:
+    print("Odd")
+
+else:
+    print("Even")

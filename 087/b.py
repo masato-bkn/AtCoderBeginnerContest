@@ -4,16 +4,26 @@
 # A 500円玉
 # B 100円 
 # C 50円
+A = int(input())
+B = int(input())
+C = int(input())
+X = int(input())
 
-a,b,c,x = map(int,[input() for i in range(4)])
+i = 0
 
-ans = 0
+for a in range(A+1):
+    if (a * 500) == X:
+        i += 1
+        break
 
-for  i in range(a+1):
-    for  j in range(b+1):
-        for k in range(c+1):
-            tmp = (500 * i) + (100 * j) + (50 * k)
-            if tmp == x:
-                ans += 1
+    for b in range(B+1):
+        if (a * 500) + (b * 100) == X:
+            i += 1
+            break
 
-print(ans)
+        for c in range(C+1):
+            if (a * 500) + (b * 100) + (c * 50)== X:
+                i += 1
+                break
+
+print(i)
