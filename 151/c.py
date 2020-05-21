@@ -3,9 +3,22 @@
 
 n,m = map(int,input().split())
 
-# 問題数分配列を作成 -> 正解判定用の関数
+# 2 5
+# 1 WA
+# 1 AC
+# 2 WA
+# 2 AC
+# 2 WA
+# 2 2
+
+# 提出問題数の分だけ配列を作る
 ac = [False] * n
-wa = [0] * n
+wa = [0] * n 
+
+# ================
+# ac F T .....
+# wa 1 2 .....
+# ================
 
 # まずはテーブルを作成する
 for i in range(m):
@@ -23,6 +36,7 @@ ac_cnt = 0
 wa_cnt = 0
 
 for i in range(n):
+    # Tの数をカウント。
     if ac[i] == True:
         ac_cnt += 1
         wa_cnt += wa[i]
