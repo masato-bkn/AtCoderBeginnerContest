@@ -9,7 +9,7 @@ n,m = map(int,input().split())
 # 2 WA
 # 2 AC
 # 2 WA
-# 2 2
+# 2 2x
 
 # 提出問題数の分だけ配列を作る
 ac = [False] * n
